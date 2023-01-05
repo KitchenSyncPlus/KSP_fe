@@ -7,7 +7,21 @@ Things you may want to cover:
 
 * Ruby version
 
-* System dependencies
+```
+2.7.4
+```
+
+* Rails version
+
+```
+5.2.8
+```
+
+* Gems included
+- `pry`
+- `rspec-rails`
+- `shoulda-matchers`
+- `faraday`
 
 * Configuration
 
