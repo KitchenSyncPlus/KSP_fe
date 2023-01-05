@@ -8,23 +8,17 @@ RSpec.describe 'landing Page', type: :feature do
       end
 
       it 'I see the title of the applications' do
-        within('#app_title') do
-          expect(current_path).to eq root_path
-          expect(page).to have_content 'Kitchen Sync Plus'
-        end
+        expect(current_path).to eq root_path
+
+        expect(page).to have_content 'KitchenSync+'
       end
 
       it 'I see a description of the app' do
-        # within('#app_description') do
-          expect(page).to have_content('community kitchen... (placeholder)')
-        # end
+        expect(page).to have_content('About our app')
       end
 
-      it "I see three links: “login”, “register”, and “sign in or register with google”" do
-        expect(page).to have_link("Login") #session conditional
-        expect(page).to have_link("Register") # ^^
-        expect(page).to have_link("Log in or Register using Google") #^
-        expect(page).to_not have_link("Logout") #navbar session conditional
+      it "I see 'Log in with Google'" do
+        expect(page).to have_button("Log in with Google") # ^
       end
 
       describe "When I click 'register'" do
@@ -36,12 +30,12 @@ RSpec.describe 'landing Page', type: :feature do
         end
 
         xit "And I see a form where I can fill out my name, email, and password/confirmation" do
-          fill_in :email, with:'mary@gmail.com'
+          fill_in :email, with: 'mary@gmail.com'
           fill_in :password, with: 'password123'
           fill_in :password_confirmation, with: 'password123'
           click_button 'Register'
 
-          expect(current_path).to eq #user_dashboard
+          expect(current_path).to eq # user_dashboard
         end
       end
     end
@@ -53,8 +47,7 @@ RSpec.describe 'landing Page', type: :feature do
         visit root_path
         click_link "Login"
       end
-      it "pending" do
-
+      xit "pending" do
       end
     end
   end
