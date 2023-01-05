@@ -36,7 +36,7 @@ RSpec.describe 'landing Page', type: :feature do
         end
 
         xit "And I see a form where I can fill out my name, email, and password/confirmation" do
-          fill_in :email, with:'mary@gmail.com'
+          fill_in :username, with:'bond007'
           fill_in :password, with: 'password123'
           fill_in :password_confirmation, with: 'password123'
           click_button 'Register'
