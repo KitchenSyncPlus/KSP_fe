@@ -20,41 +20,42 @@ RSpec.describe 'landing Page', type: :feature do
         # end
       end
 
-      xit "I see three links: “login”, “register”, and “sign in or register with google”" do
-        expect(page).to have_link("Login")
-        expect(page).to have_link("Register")
-        expect(page).to have_link("Sign in or Register with Google")
-        expect(page).to_not have_link("Logout")
+      it "I see three links: “login”, “register”, and “sign in or register with google”" do
+        expect(page).to have_link("Login") #session conditional
+        expect(page).to have_link("Register") # ^^
+        expect(page).to have_link("Log in or Register using Google") #^
+        expect(page).to_not have_link("Logout") #navbar session conditional
       end
 
       describe "When I click 'register'" do
         before(:each) do
           # click_link("Register")
         end
-        it "I am redirected to '/users/register'" do
-          # expect(current_path).to eq(register_path)
+        xit "I am redirected to '/users/register'" do
+          expect(current_path).to eq(register_path)
         end
 
-        it "And I see a form where I can fill out my name, email, and password/confirmation" do
-          # Oauth??
-        end
+        xit "And I see a form where I can fill out my name, email, and password/confirmation" do
+          fill_in :email, with:'mary@gmail.com'
+          fill_in :password, with: 'password123'
+          fill_in :password_confirmation, with: 'password123'
+          click_button 'Register'
 
-        describe 'When I click "register",' do
-          before :each do
-            # click_button "register"
-          end
-
-          it " I am redirected to my dashboard (logged in user show page)" do
-
-          end
+          expect(current_path).to eq #user_dashboard
         end
       end
     end
   end
 
   describe 'As A User' do
-    it "pending" do
+    describe "When I click 'Login' on the landing page" do
+      before :each do
+        visit root_path
+        click_link "Login"
+      end
+      it "pending" do
 
+      end
     end
   end
 end
