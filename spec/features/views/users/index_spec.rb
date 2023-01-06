@@ -4,7 +4,7 @@ RSpec.describe 'Users' do
   describe '#index' do
     it 'shows all current users as links' do
       10.times do
-        User.create(name: Faker::Name.name, email: Faker::Internet.email)
+        create(:user)
       end
 
       users = User.all
