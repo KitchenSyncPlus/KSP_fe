@@ -65,3 +65,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem "rubocop", "~> 1.42"
 
 gem "net-http", "~> 0.3.2"
+
+gem "faker", "~> 3.1"
