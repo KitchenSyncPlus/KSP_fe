@@ -1,6 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe 'landing Page', type: :feature do
+
+  describe 'navbar' do
+    it 'has a link to recipes' do
+      visit "/"
+      expect(page).to have_link('Recipes')
+      click_link 'Recipes'
+      expect(current_path).to eq(recipes_path)
+    end
+  end
+
   describe 'As a visitor' do
     describe 'When I visit the Landing Page' do
       before(:each) do
