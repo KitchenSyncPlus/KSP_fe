@@ -25,6 +25,7 @@ RSpec.describe Group, type: :model do
 
   describe 'associations' do
     it { should have_many(:group_users) }
+    it { should have_many(:recipes) }
     it { should have_many(:users).through(:group_users) }
   end
 end
