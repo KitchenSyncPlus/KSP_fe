@@ -26,6 +26,10 @@ describe 'An Ingredient' do
       expect(@sample_ingredient.quantity).to eq(1.1)
       expect(@sample_ingredient.measure).to eq('pound')
       expect(@sample_ingredient.food).to eq('exact food type')
+      expect(@sample_ingredient.weight).to eq(10.1)
+      expect(@sample_ingredient.foodCategory).to eq('General Category')
+      expect(@sample_ingredient.foodId).to eq('big_alphanumeric_string')
+      expect(@sample_ingredient.image).to eq('an Image URI')
     end
   end
 end

@@ -16,6 +16,6 @@ class Ingredient
     @weight = data[:weight]
     @foodCategory = data[:foodCategory]
     @foodId = data[:foodId]
-    @imag = data[:imag]
+    @image = data[:image]
   end
 end
