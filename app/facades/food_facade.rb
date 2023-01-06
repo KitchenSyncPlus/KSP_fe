@@ -1,6 +1,8 @@
 class FoodFacade
-  def ingredient(ingr)
-    service.ingredient(ingr)
+  def recipes(meal)
+    ingredients = service.recipes(meal)[:hits][0][:recipe][:ingredients]
+
+    ingredients.map { |i| Ingredient.new(i) }
   end
 
   def service

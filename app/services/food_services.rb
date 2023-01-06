@@ -1,6 +1,6 @@
 class FoodServices
-  def recipe(ingr)
-    get_url("/api/recipes/v2", {meal: ingr, random: true})
+  def recipes(meal)
+    get_url("/api/recipes/v2", {meal: meal, random: true})
   end
 
   def get_url(url, params = nil)
