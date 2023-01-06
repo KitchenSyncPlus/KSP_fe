@@ -9,6 +9,12 @@ require 'rails_helper'
 
 RSpec.describe 'Landing Page' do
   context "index" do
+    it 'has a link to all users' do
+      visit "/"
+      click_link "Users"
+      expect(current_path).to eq(users_path)
+    end
+
     it 'has a link to register' do
       visit "/"
       click_link "Register"
