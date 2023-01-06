@@ -1,9 +1,4 @@
-# As a user
-# When I visit “/users/:id”
-# I can see a list of all my groups
-
 require 'rails_helper'
-
 
 RSpec.describe 'Users' do
   describe '#show' do
@@ -19,5 +14,4 @@ RSpec.describe 'Users' do
       expect(page).to have_content(second_group.name)
     end
   end
-
 end
