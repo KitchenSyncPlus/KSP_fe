@@ -14,7 +14,7 @@ gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '>= 4.3.12'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -67,3 +67,5 @@ gem "rubocop", "~> 1.42"
 gem "net-http", "~> 0.3.2"
 
 gem "faker", "~> 3.1"
+
+gem "factory_bot_rails", "~> 6.2", :groups => [:test, :development]

@@ -3,5 +3,6 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
 
   has_many :group_users
+  has_many :recipe_ingredients
   has_many :groups, through: :group_users
 end
