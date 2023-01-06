@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def show
    
     @user = User.find(params[:id])
+    @groups = Group.find(params[:id]) 
   end
 
   def new
