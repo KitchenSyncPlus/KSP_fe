@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :users, only: %i[index show new create]
 
   get '/auth/:provider/callback', to: 'sessions#create'
+  get '/auth/failure', to: redirect('/')
 end
