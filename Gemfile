@@ -69,3 +69,5 @@ gem "net-http", "~> 0.3.2"
 gem "faker", "~> 3.1"
 
 gem "factory_bot_rails", "~> 6.2", :groups => [:test, :development]
+
+gem "figaro", "~> 1.2"
