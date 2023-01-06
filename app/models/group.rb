@@ -1,4 +1,7 @@
-class Group < ApplicationRecord 
-  validates_presence_of :name, :about 
-  has_many :users
+class Group < ApplicationRecord
+  validates :name, presence: true
+  validates :about, presence: true
+
+  has_many :group_users
+  has_many :users, through: :group_users
 end

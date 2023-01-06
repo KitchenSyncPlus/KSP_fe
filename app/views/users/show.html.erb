@@ -1,21 +1,18 @@
-<h1><center><%= @user.name%>'s Dashboard</center></h1>
-<style>
-p.double {border-style: double;}
-</style>
 
 
-<h3>My Groups</h3>
-<p class="double">
   <%# <% @users.groups.each do |group| %>
        <%# <ul> <%= group.name%> </ul> %>
   <%# <% end %> %> %>
 <p><%= button_to "Create New Group", new_group_path, method: :get %></p>
-</p>
-<div class="row border border-1">
-<div class="col-6 border border-5">
-Hello World
+
+<div class="row">
+  <div class="col border border-1">
+    <h1><%= @user.name %>'s dashboard</h1>
+  </div>
 </div>
-<div class="col-6 display-flex justify-content-center border border-5">
-<%= button_to "Create New Group", new_group_path, method: :get %>
-</div>
+
+<div class="row">
+  <div class="col">
+    <h2><%= @user.name %>'s groups</h2>
+  </div>
 </div>

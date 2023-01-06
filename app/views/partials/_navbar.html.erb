@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">KitchenSync+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home
+            <%# <span class="visually-hidden">(current)</span> %>
+          </a>
+        </li>
+        <%# ------- placeholders, should change on login (partials?) ------- %>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <%= link_to 'Register', new_user_path, class: 'nav-link' %>
+        <%= link_to 'Users', users_path, class: 'nav-link' %>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <%# ------ below should be shown on login (as a partial?) ------ %>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Groups</a>
+          <div class="dropdown-menu dropdown-menu-dark">
+            <a class="dropdown-item" href="#">Group 1</a>
+            <a class="dropdown-item" href="#">Group 2</a>
+            <a class="dropdown-item" href="#">Group 3</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">All Groups</a>
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button class="btn btn-secondary" type="button">Log in with Google</button>
+      </form>
+    </div>
+  </div>
+</nav>
