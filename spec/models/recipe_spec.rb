@@ -13,5 +13,6 @@ RSpec.describe Recipe, type: :model do
 
   describe 'associations' do
     it { should belong_to(:group) }
+    it { should have_many(:recipe_ingredients) }
   end
 end
