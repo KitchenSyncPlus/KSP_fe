@@ -13,7 +13,7 @@
 <div class="row">
   <div class="col">
     <h2><%= @user.name %>'s groups</h2>
-          <% @user.group.each do |group| %>
+          <% @user.groups.each do |group| %>
               <ul> <%= group.name %> </ul>
           <% end %>  
 
