@@ -1,0 +1,27 @@
+<div class="row p-3 justify-content-center">
+  <div class="col-3">
+    <%= form_with(url: "/users", method: :post, local: true) do |form_builder_object| %>
+      <table class="">
+        <tr>
+          <td>
+            <%= form_builder_object.label :name %>
+          </td>
+          <td>
+            <%= form_builder_object.text_field :name %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= form_builder_object.label :email %>
+          </td>
+          <td><%= form_builder_object.text_field :email %></td>
+        </tr>
+        <tr>
+          <td>
+            <%= form_builder_object.submit "submit" %>
+          </td>
+        </tr>
+      </table>
+    <% end %>
+  </div>
+</div>
