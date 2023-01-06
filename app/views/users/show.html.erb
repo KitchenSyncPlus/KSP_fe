@@ -24,7 +24,7 @@
   <div class="col">
     <h2><%= @user.name %>'s groups</h2>
           <% @user.groups.each do |group| %>
-              <ul> <%= group.name %> </ul>
+              <ul> <%= link_to group.name, group_path(group) %> </ul>
           <% end %>  
 
 <p><%= button_to "Create New Group", new_group_path, method: :get %></p>
