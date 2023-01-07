@@ -75,12 +75,21 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.10)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     date (3.3.3)
     diff-lcs (1.5.0)
     docile (1.4.0)
     erubi (1.12.0)
     execjs (2.8.1)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
+    faker (3.1.0)
+      i18n (>= 1.8.11, < 2)
     faraday (2.7.2)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
@@ -91,6 +100,7 @@ GEM
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
+    hashdiff (1.0.1)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
@@ -120,6 +130,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.1)
     minitest (5.17.0)
     msgpack (1.6.0)
     multi_xml (0.6.0)
@@ -135,6 +146,9 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
+    nokogiri (1.13.10)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri (1.13.10-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.13.10-x86_64-darwin)
@@ -170,7 +184,8 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (5.0.1)
-    puma (3.12.6)
+    puma (6.0.2)
+      nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.5)
     rack-protection (3.0.5)
@@ -296,12 +311,20 @@ GEM
       execjs (>= 0.3.0, < 3)
     unicode-display_width (2.4.2)
     uri (0.12.0)
+<<<<<<< HEAD
     version_gem (1.1.1)
+=======
+    vcr (6.1.0)
+>>>>>>> d8d37e6147fe643f04be47ca39a4ce0078201ecb
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webmock (3.18.1)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -310,7 +333,11 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+<<<<<<< HEAD
   x86_64-darwin-21
+=======
+  ruby
+>>>>>>> d8d37e6147fe643f04be47ca39a4ce0078201ecb
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
@@ -318,7 +345,14 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.2)
+<<<<<<< HEAD
   figaro
+=======
+  factory_bot_rails (~> 6.2)
+  faker (~> 3.1)
+  faraday (~> 2.7)
+  figaro (~> 1.2)
+>>>>>>> d8d37e6147fe643f04be47ca39a4ce0078201ecb
   jbuilder (~> 2.5)
   jquery-rails
   launchy
@@ -329,7 +363,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   popper_js
   pry
-  puma (~> 3.11)
+  puma (>= 4.3.12)
   rails (~> 5.2.8, >= 5.2.8.1)
   rspec-rails
   rubocop (~> 1.42)
@@ -340,7 +374,9 @@ DEPENDENCIES
   tether-rails
   tzinfo-data
   uglifier (>= 1.3.0)
+  vcr (~> 6.1)
   web-console (>= 3.3.0)
+  webmock (~> 3.18)
 
 RUBY VERSION
    ruby 2.7.4p191
