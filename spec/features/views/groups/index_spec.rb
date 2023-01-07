@@ -1,15 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe 'Groups' do 
-  describe '#index' do 
+RSpec.describe 'Groups' do
+  before(:each) do
+    create_list(:group, 5)
 
-    it 'shows all current groups' do 
-      5.times do 
-        create(:group)
-      end
-      groups = Group.all 
-      
-      visit groups_path 
+    visit groups_path
+  end
+
+  describe '#index' do
+    it 'shows all current groups' do
+      groups = Group.all
 
       groups.each do |group|
         expect(page).to have_link(group.name)
