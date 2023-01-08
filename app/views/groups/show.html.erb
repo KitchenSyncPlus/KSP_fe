@@ -6,7 +6,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-6">
     <table>
       <tr>
         <th>
@@ -20,5 +20,25 @@
         </tr>
       <% end %>
     </table>
+  </div>
+  <div class="col-6 d-flex flex-column">
+    <p>Add a recipe</p>
+    <%= form_with(url: group_path(@group.id), method: :get, local: true) do |f| %>
+      <%= f.label :search %>
+      <%= f.text_field :search %>
+      <%= f.submit 'search' %>
+    <% end %>
+    <% if !@search_results.nil? %>
+    <div>
+    <p>search results</p>
+      <table>
+        <% @search_results.each do |search_result| %>
+        <tr>
+          <td><%= search_result.label %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+    <% end %>
   </div>
 </div>
