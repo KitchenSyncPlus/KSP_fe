@@ -31,9 +31,10 @@ RSpec.describe 'Groups' do
       alvin = chipmunk_smackdown.users.create!(name: "Alvin", email: "Acorn@tree.com")
       theo = chipmunk_smackdown.users.create!(name: "Theodore", email: "Walnut@tree.com")
       simon = fish_fighters.users.create!(name: "Simon", email: "outcastvermin@trap.com")
+
       visit group_path(chipmunk_smackdown)
 
-      expect(page).to have_content('Group Members: 2')
+      expect(page).to have_content('Group Participants: 2')
    end
   end 
 end

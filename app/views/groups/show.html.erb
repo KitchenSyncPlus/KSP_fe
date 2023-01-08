@@ -9,7 +9,7 @@
 <br>
 <br>
  
-<h5>Group Participants</h5>
+<h5>Group Participants: <%= @group.user_count %></h5>
 <% @group.users.each do |user| %>
  <ul><%= user.name %></ul>
 <% end %>
