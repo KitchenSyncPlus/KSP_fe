@@ -25,5 +25,13 @@ RSpec.describe 'Users' do
         expect(current_path).to eq(new_user_path)
       end
     end
+
+    context "destroy a user" do
+      it 'has the ability to destroy a user' do
+        first_user = User.first
+        expect(page).to have_content("delete #{first_user.name}")
+      end
+    end
+    
   end
 end
