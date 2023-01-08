@@ -13,4 +13,21 @@
       <% end %>
     </div>
   </div>
+  <% if !@search_term.nil? %>
+    <div class="row m-5">
+      <div class="col">
+        <table>
+          <tr>
+            <td>search term:</td>
+            <td><%= @search_term %></td>
+          </tr>
+          <% @ingredients.each do |ingredient| %>
+          <tr>
+            <td><%= ingredient.text %></td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  <% end %>
 </div>
