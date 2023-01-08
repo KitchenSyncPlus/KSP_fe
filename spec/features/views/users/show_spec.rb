@@ -15,9 +15,9 @@ RSpec.describe 'Users' do
 
     end
 
-    xit 'has a link to create a new group', :vcr do
+    it 'has a link to create a new group', :vcr do
       user = User.create!(name: 'foo bar', email: 'foo@email.com')
-      first_group = user.groups.create!(name: 'foo group name', about: 'about foo')
+      first_group = user.groups.create!(name: Faker::Color.color_name, about: Faker::Company.bs)
 
       visit user_path(user.id)
 

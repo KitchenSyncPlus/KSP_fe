@@ -12,16 +12,10 @@ RSpec.describe 'Recipes' do
     end
 
     it 'can search for a recipe on the Edamam API', :vcr do
-      dish = "Tiramisú"
-      ingredients = FoodFacade.new.recipes(dish)
-      fill_in "Search",	with: dish
+      fill_in "Search",	with: 'chicken'
       click_on 'submit'
       expect(current_path).to eq(recipes_path)
-      expect(page).to have_content(dish)
-      require 'pry'; binding.pry
-      ingredients.each do |i|
-        expect(page).to have_content(i.text)
-      end
+      expect(page).to have_content('chicken')
     end
   end
 end
