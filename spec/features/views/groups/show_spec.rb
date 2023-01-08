@@ -33,7 +33,7 @@ RSpec.describe 'Groups' do
       simon = fish_fighters.users.create!(name: "Simon", email: "outcastvermin@trap.com")
       visit group_path(chipmunk_smackdown)
 
-      expect(page).to have_content('Group Members: 3')
+      expect(page).to have_content('Group Members: 2')
    end
   end 
 end
