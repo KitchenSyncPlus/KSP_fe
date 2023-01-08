@@ -324,6 +324,11 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+<<<<<<< HEAD
+=======
+  ruby
+  x86_64-darwin-21
+>>>>>>> a7fe970a96d22b83b14c504349bee0bf6aee6b83
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)

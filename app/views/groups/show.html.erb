@@ -7,18 +7,17 @@
 </div>
 <div class="row">
   <div class="col">
-
-  <table>
-  <tr>
-    <th>
-      <td>Group Participants</td>
-    </th>
-  </tr>
-  <% @group.users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-  </tr>
-  <% end %>
-  </table>
+    <table>
+      <tr>
+        <th>
+          <td>Group Participants</td>
+        </th>
+      </tr>
+      <% @group.users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+        </tr>
+      <% end %>
+    </table>
   </div>
 </div>
