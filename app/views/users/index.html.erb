@@ -15,6 +15,7 @@
       <% @users.each do |user|%>
         <tr>
           <td><%= link_to user.name, user_path(user.id) %></td>
+          <td><%= link_to "delete #{user.name}", user_path(user.id), method: :delete %></td>
         </tr>
       <% end %>
     </table>

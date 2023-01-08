@@ -30,8 +30,9 @@ RSpec.describe 'Users' do
       it 'has the ability to destroy a user' do
         first_user = User.first
         expect(page).to have_content("delete #{first_user.name}")
+        click_link("delete #{first_user.name}" )
+        expect(page).to_not have_content(first_user.name)
       end
     end
-    
   end
 end
