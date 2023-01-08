@@ -1,10 +1,8 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1><center>Group Index</center></h1>
-      <% @groups.each do |group| %>
-        <p><%= link_to group.name, group_path(group) %></p>
-      <% end %>
-    </div>
+<div class="row">
+  <div class="col">
+    <h1><center>Group Index</center></h1>
+    <% @groups.each do |group| %>
+      <p><%= link_to group.name, group_path(group) %></p>
+    <% end %>
   </div>
 </div>
