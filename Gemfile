@@ -73,8 +73,6 @@ gem "faker", "~> 3.1"
 
 gem "factory_bot_rails", "~> 6.2", :groups => [:test, :development]
 
-gem "figaro", "~> 1.2"
-
 gem "faraday", "~> 2.7"
 
 gem "webmock", "~> 3.18", :group => :test
