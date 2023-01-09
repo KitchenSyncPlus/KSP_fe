@@ -4,6 +4,9 @@ class GroupsController < ApplicationController
   end
 
   def show
+    if params.has_key? :search
+      @search_results = FoodFacade.new.search_results(params[:search])
+    end
     @group = Group.find(params[:id])
   end
 
