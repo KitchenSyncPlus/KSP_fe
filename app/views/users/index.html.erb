@@ -1,21 +1,23 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>All users</h1>
-    </div>
+<div class="row p-3">
+  <div class="col-6">
+    <h1>All users</h1>
   </div>
-  <div class="row">
-    <div class="col">
-      <table class="table">
+  <div class="col-6">
+    <%= link_to 'add user', new_user_path,  class: "btn btn-primary" %>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <tr>
+        <th>User Name:</th>
+      </tr>
+      <% @users.each do |user|%>
         <tr>
-          <th>User Name:</th>
+          <td><%= link_to user.name, user_path(user.id) %></td>
+          <td><%= link_to "delete #{user.name}", user_path(user.id), method: :delete %></td>
         </tr>
-        <% @users.each do |user|%>
-          <tr>
-            <td><%= link_to user.name, user_path(user.id) %></td>
-          </tr>
-        <% end %>
-      </table>
-    </div>
+      <% end %>
+    </table>
   </div>
 </div>

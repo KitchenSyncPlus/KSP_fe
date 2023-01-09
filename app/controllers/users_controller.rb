@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    current_user = User.find_by_id(session[:current_user_id])
     @users = User.all
   end
 
@@ -19,6 +20,13 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+
+    redirect_to users_path
   end
 
   private

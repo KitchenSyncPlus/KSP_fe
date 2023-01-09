@@ -1,15 +1,44 @@
-<h1><%= @group.name %></h1>
-<br>
-<br> #page will need to be stylized
-<br>
-<h3>Group Details:</h3>
-<p><%= @group.about %></p>
- 
-<br>
-<br>
-<br>
- 
-<h5>Group Participants</h5>
-<% @group.users.each do |user| %>
- <ul><%= user.name %></ul>
-<% end %>
+<div class="row">
+  <div class="col">
+    <h1>Group name: <%= @group.name %></h1>
+    <h3>About this group:</h3>
+    <p><%= @group.about %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <table>
+      <tr>
+        <th>
+          <td>Group Participants:</td>
+          <td><%= @group.user_count %></td>
+        </th>
+      </tr>
+      <% @group.users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+  <div class="col-6 d-flex flex-column">
+    <p>Add a recipe</p>
+    <%= form_with(url: group_path(@group.id), method: :get, local: true) do |f| %>
+      <%= f.label :search %>
+      <%= f.text_field :search %>
+      <%= f.submit 'search' %>
+    <% end %>
+    <% if !@search_results.nil? %>
+    <div>
+    <p>search results</p>
+      <table>
+        <% @search_results.each do |search_result| %>
+        <tr>
+          <td><%= search_result.label %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+    <% end %>
+  </div>
+</div>

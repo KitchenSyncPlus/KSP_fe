@@ -7,7 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Group.destroy_all
 
 10.times do
   User.create!(name: Faker::Name.name, email: Faker::Internet.email)
+end
+
+
+10.times do
+  Group.create!(name: Faker::Color.color_name, about: Faker::Company.bs)
 end

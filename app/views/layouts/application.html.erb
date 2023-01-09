@@ -47,12 +47,14 @@
             <%# ------ below should be shown on login (as a partial?) ------ %>
           </ul>
           <form class="d-flex">
-            <button class="btn btn-secondary" type="button">Log in with Google</button>
+            <%= link_to 'Log In With Google', '/auth/google_oauth2', class: 'nav-link' %>
           </form>
         </div>
       </div>
     </nav>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

@@ -28,15 +28,15 @@ RSpec.describe 'landing Page', type: :feature do
       end
 
       it "I see 'Log in with Google'" do
-        expect(page).to have_button("Log in with Google") # ^
+        expect(page).to have_link("Log In With Google") # ^
       end
 
       describe "When I click 'register'" do
         before(:each) do
-          # click_link("Register")
+          click_link("Register")
         end
-        xit "I am redirected to '/users/register'" do
-          expect(current_path).to eq(register_path)
+        it "I am redirected to '/users/register'" do
+          expect(current_path).to eq(new_user_path)
         end
 
         xit "And I see a form where I can fill out my name, email, and password/confirmation" do
@@ -56,8 +56,6 @@ RSpec.describe 'landing Page', type: :feature do
       before :each do
         visit root_path
         click_link "Login"
-      end
-      xit "pending" do
       end
     end
   end

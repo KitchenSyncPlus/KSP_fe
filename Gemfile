@@ -51,6 +51,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'simplecov'
+  gem 'figaro'
 end
 
 group :development do
@@ -66,11 +67,11 @@ gem "rubocop", "~> 1.42"
 
 gem "net-http", "~> 0.3.2"
 
+gem 'omniauth-google-oauth2'
+
 gem "faker", "~> 3.1"
 
 gem "factory_bot_rails", "~> 6.2", :groups => [:test, :development]
-
-gem "figaro", "~> 1.2"
 
 gem "faraday", "~> 2.7"
 

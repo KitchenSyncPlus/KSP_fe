@@ -1,10 +1,12 @@
 class GroupsController < ApplicationController
-
   def index
-    @groups = Group.all 
+    @groups = Group.all
   end
 
   def show
+    if params.has_key? :search
+      @search_results = FoodFacade.new.search_results(params[:search])
+    end
     @group = Group.find(params[:id])
   end
 
@@ -17,12 +19,13 @@ class GroupsController < ApplicationController
 
     if @new_group.save
       redirect_to group_path(@new_group)
-    else 
+    else
       render :new
     end
   end
 
   private
+
   def group_params
     params.permit(:name, :about)
   end
