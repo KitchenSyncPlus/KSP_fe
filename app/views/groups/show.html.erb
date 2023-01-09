@@ -42,11 +42,14 @@
     <% end %>
     <% if !@search_results.nil? %>
     <div>
-    <p>search results</p>
+    <p>Search results, click to add to menu</p>
       <table>
         <% @search_results.each do |search_result| %>
         <tr>
-          <td><%= search_result.label %></td>
+          <td>
+            <button type="button" class="btn btn-secondary">+</button>
+            <%= link_to "#{search_result.label}", "/recipes?utf8=✓&search=#{search_result.label}&commit=submit" %>
+          </td>
         </tr>
         <% end %>
       </table>
