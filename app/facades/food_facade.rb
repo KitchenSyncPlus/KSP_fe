@@ -1,15 +1,15 @@
 class FoodFacade
 
-  def search_results(meal)
-    search_results = service.recipes(meal)[:hits]
+  def self.search_results(meal)
+    search_results = FoodService.recipes(meal)[:hits]
     search_results.map do |recipe|
       Recipe.new(label: recipe[:recipe][:label])
     end
   end
 
-  def recipes(meal)
-    ingredients = service.recipes(meal)[:hits][0][:recipe][:ingredients]
-
+  def self.recipes(meal)
+    ingredients_data = FoodService.recipes(meal)
+    ingredients = ingredients_data[:hits][0][:recipe][:ingredients]
     ingredients.map { |i| Ingredient.new(i) }
   end
 

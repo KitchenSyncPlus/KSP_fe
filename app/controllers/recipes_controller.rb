@@ -3,7 +3,8 @@ class RecipesController < ApplicationController
     if params.has_key? :search
       # search for the recipe
       @search_term = params[:search]
-      @ingredients = FoodFacade.new.recipes(params[:search])
+      # pry
+      @ingredients = FoodFacade.recipes(params[:search])
     else
       # don't search for the recipe
     end
