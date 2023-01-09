@@ -10,7 +10,8 @@
     <table>
       <tr>
         <th>
-          <td>Group Participants</td>
+          <td>Group Participants:</td>
+          <td><%= @group.user_count %></td>
         </th>
       </tr>
       <% @group.users.each do |user| %>

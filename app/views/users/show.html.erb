@@ -22,7 +22,7 @@
       <% @user.groups.each do |group| %>
         <ul> <%= link_to group.name, group_path(group) %> </ul>
       <% end %>
-      <p><%= button_to "Create New Group", new_group_path, method: :get %></p>
+      <p><%= button_to "Create New Group", new_user_group_path(@user.id), method: :get %></p>
     </div>
   </div>
 </div>
