@@ -47,5 +47,16 @@ RSpec.describe 'Groups' do
       expect(current_path).to eq(group_path(@group1.id))
       expect(page).to have_content('search results')
     end
+    
+    it 'searched recipes can be added to group menu' do
+      visit "/groups/#{@group1.id}"
+      fill_in 'Search', with: 'Vegan Tikka Masala'
+      click_on 'search'
+      click_on 'Vegan Tikka Masala with Tofu and Cauliflower'
+      within '#group_menu' do
+        expect(page).to have_content('Vegan Tikka Masala with Tofu and Cauliflower')
+      end
+    end
+
   end
 end
