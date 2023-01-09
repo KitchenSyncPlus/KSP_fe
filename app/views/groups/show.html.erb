@@ -1,15 +1,23 @@
-<h1><%= @group.name %></h1>
-<br>
-<br> #page will need to be stylized
-<br>
-<h3>Group Details:</h3>
-<p><%= @group.about %></p>
- 
-<br>
-<br>
-<br>
- 
-<h5>Group Participants: <%= @group.user_count %></h5>
-<% @group.users.each do |user| %>
- <ul><%= user.name %></ul>
-<% end %>
+<div class="row">
+  <div class="col">
+    <h1>Group name: <%= @group.name %></h1>
+    <h3>About this group:</h3>
+    <p><%= @group.about %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <table>
+      <tr>
+        <th>
+          <td>Group Participants</td>
+        </th>
+      </tr>
+      <% @group.users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
