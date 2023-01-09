@@ -21,8 +21,16 @@
       <% end %>
     </table>
     <table id="group_menu">
-      <tr>
-      </tr>
+      <thead>
+        <tr>
+          <th scope="col">Menu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @group.recipes.each do |r|%>
+          <th scope="row" id="recipe-<%= r.id %>"><%= r.label%></th>
+        <% end %>
+      </tbody>
     </table>
   </div>
   <div class="col-6 d-flex flex-column">
