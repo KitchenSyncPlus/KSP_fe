@@ -31,4 +31,4 @@ coverage
 /config/application.yml
 
 /notes/
-/spec/fixtures/
+/spec/fixtures/vcr_cassettes

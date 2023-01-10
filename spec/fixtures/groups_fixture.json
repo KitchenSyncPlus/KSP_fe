@@ -1,0 +1,49 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "type": "group",
+            "attributes": {
+                "name": "fuchsia",
+                "about": "expedite next-generation platforms",
+                "users": []
+            }
+        },
+        {
+            "id": "2",
+            "type": "group",
+            "attributes": {
+                "name": "green",
+                "about": "mesh robust web-readiness",
+                "users": []
+            }
+        },
+        {
+            "id": "3",
+            "type": "group",
+            "attributes": {
+                "name": "amaranth",
+                "about": "seize holistic partnerships",
+                "users": []
+            }
+        },
+        {
+            "id": "4",
+            "type": "group",
+            "attributes": {
+                "name": "harlequin",
+                "about": "benchmark efficient deliverables",
+                "users": []
+            }
+        },
+        {
+            "id": "5",
+            "type": "group",
+            "attributes": {
+                "name": "rose",
+                "about": "maximize front-end infrastructures",
+                "users": []
+            }
+        }
+    ]
+}

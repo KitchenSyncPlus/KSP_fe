@@ -1,0 +1,11 @@
+{
+    "data": {
+        "id": "11",
+        "type": "user",
+        "attributes": {
+            "name": "Mariano Hartmann DDS",
+            "email": "concha@greenfelder-schuppe.name",
+            "groups": []
+        }
+    }
+}
