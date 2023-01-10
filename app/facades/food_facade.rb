@@ -1,16 +1,19 @@
 class FoodFacade
 
-  def search_results(meal)
-    search_results = service.recipes(meal)[:hits]
+  def self.search_results(meal)  #this one is updated
+    search_results = FoodService.recipes(meal)[:hits]
     search_results.map do |recipe|
-      Recipe.new(label: recipe[:recipe][:label])
+      Recipe.new(label: recipe[:label])
     end
   end
-
-  def recipes(meal)
-    ingredients = service.recipes(meal)[:hits][0][:recipe][:ingredients]
-
-    ingredients.map { |i| Ingredient.new(i) }
+    #these 2 can be merged into 1?
+  def self.recipes(meal)
+    recipe_data = FoodService.recipes(meal)[:hits]
+    ingredients = recipe_data[0][:ingredientLines]
+    # require "pry"; binding.pry
+    ingredients.map do |i|
+      Ingredient.new(i)  #ingredientLines, not hash of ingredients
+    end
   end
 
   def service

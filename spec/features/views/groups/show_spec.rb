@@ -45,7 +45,28 @@ RSpec.describe 'Groups' do
       fill_in "Search",	with: "chicken"
       click_on 'search'
       expect(current_path).to eq(group_path(@group1.id))
-      expect(page).to have_content('search results')
+      expect(page).to have_content('Search results')
     end
+    
+    it 'searched recipes link to recipes page', :vcr do
+      visit "/groups/#{@group1.id}"
+      fill_in 'Search', with: 'Vegan Tikka Masala'
+      click_on 'search'
+      click_on 'Vegan Tikka Masala with Tofu and Cauliflower'
+      expect(current_path).to eq('/recipes')
+      expect(page).to have_content('Vegan Tikka Masala with Tofu and Cauliflower')
+      expect(page).to have_content('1 Tablespoon Garam Masala')
+    end
+
+    xit 'searched recipes can be added to group menu', :vcr do
+      visit "/groups/#{@group1.id}"
+      fill_in 'Search', with: 'Vegan Tikka Masala'
+      click_on 'search'
+      click_on 'Vegan Tikka Masala with Tofu and Cauliflower'
+      within '#group_menu' do
+        expect(page).to have_content('Vegan Tikka Masala with Tofu and Cauliflower')
+      end
+    end
+
   end
 end
