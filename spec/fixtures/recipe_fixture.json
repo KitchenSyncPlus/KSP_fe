@@ -1,0 +1,39 @@
+{
+    "label": "Avocado Salad Dressing",
+    "image": "https://edamam-product-images.s3.amazonaws.com/web-img/2f9/2f92573e6d9805a021443e82ff613b23.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjECwaCXVzLWVhc3QtMSJHMEUCIQDBhz1%2FZu%2Ff%2FCrFf53TzVQOLzPtDWRNaHyYDL%2Bg79pb1gIgfR394rfA4KB%2Fo3Pg9AXGucD%2BlhxK1UKSnhF0u1rCH6Eq1QQIhf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDAQuN6pL0eqU21ALuSqpBFcRgPo2PjtPw%2FuNUdPFw1l0AdRhSMV19a%2F5uOd3lCC7f4UlWCOY%2BHyjd53AekhqoLVgU8UuHvlVAz6LUDzJnI9ozDUgzhtT86flb59i%2Bg%2FSkS2y2W%2BAsfBOrfXGib5JF%2BfB9wujMydt2%2FBRucHzNKdYbHJNodAq7aR%2B5VSGzuGvOKwYl%2FlxlNKmlFUaL%2B2Jo91%2BJ0SYmnonsimseSub3eVuk8CuqomVZtRu7zrsD8DasbUMogI%2FWM8fEPfUmfGA1%2B%2BT9Xd2WQesWmu1CXTW5%2BAyPwt4mie6nYYaFR01pC%2B3j1glfWBNrIfSuFY3d%2BKBMGsZq%2BSBbVnFTSY9OOlSXOTbV0xBgCuQOXDTKGOvrXPPLW3WxUqvG0ARXZuSqEKHW1lfhEY3c0csnDQNUSNQ1eu%2BW22XcxbPwFSchjFI1a5jlK3FKGGtueOrWrwUHW5Nqn1B6oGu6NsgmSIAXa%2BkAk%2B9QcGDhuX7j5%2BiemWCPyomdEG3r1QMafSduXX%2FvTESjH29g80GRxySD0K1nogcXCaWVeoLK%2BrHcmPQ3ZUf2K%2FTnAlAOJkouoo8CJGYWqKytVSxgiXdL8vrMExJmLVPLKgYqbn%2FlkWnen%2BIlar5kBV%2FNLcDGSpuGlZJz32brrmyDgwGyZzNT9f1%2BKkTbHgKN9riDwoIQ9kRg0y2%2BCI9T%2BR1vQa89GFYGurtNMNSpvtLd8Yli2E20uKjdDcKUtwV%2FiBC2rGJWwxqjnMw1MXznQY6qQHxQzHL8%2B1CNYzCxg%2BDVQkklwluD2czKsmNTfdn8bHrzet53eQxeaAIMjVM3Ly6lSR1L%2F%2BfQI4PgKMDtpxudY0v5K6WTQluZFibyCcaxiXMD%2FuNRJIwRqzBXwtjSLEsRyq0gWgT8jvc0zHfIm%2FBzhG%2BteuEKopCJN3zJY1%2FhnQiR2oR9qkkrnJPclo%2B9v%2FCfQ8H7n8KZaG%2FYPRtmMT8F2V5uU12ftuA%2BZ5g&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230110T052459Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFMYHFXGEF%2F20230110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=6e6a5dbc4e0fb6b4decca38a4534fa9351a03664512819699d4f358ef3abb185",
+    "yield": 1.5,
+    "ingredientLines": [
+        "1/2 a large, ripe avocado",
+        "The juice of 1/2 a lemon",
+        "5 tablespoons avocado oil",
+        "Sea salt, black pepper"
+    ],
+    "ingredients": [
+        {
+            "quantity": 0.5,
+            "measure": "<unit>",
+            "food": "avocado",
+            "image": "https://www.edamam.com/food-img/984/984a707ea8e9c6bf5f6498970a9e6d9d.jpg"
+        },
+        {
+            "quantity": 0.5,
+            "measure": "<unit>",
+            "food": "lemon",
+            "image": "https://www.edamam.com/food-img/70a/70acba3d4c734d7c70ef4efeed85dc8f.jpg"
+        },
+        {
+            "quantity": 5.0,
+            "measure": "tablespoon",
+            "food": "avocado oil",
+            "image": "https://www.edamam.com/food-img/ce2/ce24db634b117a51aa525b29a110a318.jpg"
+        },
+        {
+            "quantity": 0.0,
+            "measure": "null",
+            "food": "Sea salt",
+            "image": "https://www.edamam.com/food-img/694/6943ea510918c6025795e8dc6e6eaaeb.jpg"
+        }
+    ],
+    "ext_id": "f4902b0396d82272658accbf8bba92c1",
+    "source_url": "https://food52.com/recipes/17850-avocado-salad-dressing"
+}
