@@ -3,8 +3,9 @@ class RecipesController < ApplicationController
     if params.has_key? :search
       # search for the recipe
       @search_term = params[:search]
-      # pry
-      @ingredients = FoodFacade.recipes(params[:search])
+      # require "pry"; binding.pry
+      @ingredients = FoodFacade.search_results(params[:search])
+      # @recipes =
     else
       # don't search for the recipe
     end
