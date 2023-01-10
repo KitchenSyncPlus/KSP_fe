@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe FoodServices do
+describe FoodService do
   context "#recipes" do
     it 'gets a list of ingredients', :vcr do
-      @recipes = FoodServices.new.recipes('chicken')
+      @recipes = FoodService.recipes('chicken')
       expect(@recipes).to have_key :hits
       expect(@recipes[:hits].count).to eq(20)
 
