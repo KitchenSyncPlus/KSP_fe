@@ -1,0 +1,20 @@
+<div class="row p-3">
+  <div class="col">
+    <%= form_with(url: new_user_group_path(params[:user_id]), method: :post, local: true) do |f| %>
+      <table>
+      <tr>
+        <th>Add a group:</th>
+      </tr>
+        <tr>
+          <th><%= f.label :name %></th>
+          <td><%= f.text_field :name %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :about %></th>
+          <td><%= f.text_field :about %></td>
+        </tr>
+        <tr><td><%= f.submit 'add group' %></td></tr>
+      </table>
+    <% end %>
+  </div>
+</div>
