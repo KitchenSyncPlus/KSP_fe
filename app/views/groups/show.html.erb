@@ -28,7 +28,7 @@
       </thead>
       <tbody>
         <% @group.recipes.each do |r|%>
-          <th scope="row" id="recipe-<%= r.id %>"><%= r.label%></th>
+          <th scope="row" id="recipe-<%= r.id %>"><%= link_to r.label, recipe_path(r)%></th>
         <% end %>
       </tbody>
     </table>
