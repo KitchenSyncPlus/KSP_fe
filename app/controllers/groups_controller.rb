@@ -4,23 +4,24 @@ class GroupsController < ApplicationController
   end
 
   def show
+   
     @search_results = FoodFacade.search_results(params[:search]) if params.has_key? :search
-    @group = Group.find(params[:id])
+    @group = GroupFacade.group(params[:id])
   end
 
-  def new
-    @new_group = Group.new
-  end
+  # def new
+  #   @new_group = Group.new
+  # end
 
-  def create
-    @new_group = Group.new(group_params)
+  # def create
+  #   @new_group = Group.new(group_params)
 
-    if @new_group.save
-      redirect_to group_path(@new_group)
-    else
-      render :new
-    end
-  end
+  #   if @new_group.save
+  #     redirect_to group_path(@new_group)
+  #   else
+  #     render :new
+  #   end
+  # end
 
   private
 

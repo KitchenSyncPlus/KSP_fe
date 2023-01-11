@@ -2,7 +2,7 @@
   <div class="col">
     <h1><center>Group Index</center></h1>
     <% @groups.each do |group| %>
-      <p><%= link_to group.name, group_path(group) %></p>
+      <p><%= link_to group.name, group_path(group.id) %></p>
     <% end %>
   </div>
 </div>
