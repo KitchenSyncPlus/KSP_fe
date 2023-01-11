@@ -31,4 +31,8 @@ class DatabaseService
         response = File.read('spec/fixtures/user_fixture.json')
         JSON.parse(response, symbolize_names: true)
     end
+
+    def self.all_users 
+        get_url("/api/v1/users")
+    end
 end

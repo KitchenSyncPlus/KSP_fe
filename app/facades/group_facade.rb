@@ -1,10 +1,10 @@
 class GroupFacade
 
-  def self.group_info
+  def self.all_groups
 
-    info = GroupService.groups
+    info = DatabaseService.groups
 
-    info.map do |i|
+    info[:data].map do |i|
       Group.new(i)
     end
   end
