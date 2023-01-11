@@ -1,6 +1,6 @@
 <div id="header" align="center">
 
-<img width="762" alt="Roe'd To Aid Logo" src="https://images.prismic.io/carbmanager/68bd7d46-5f50-413c-97fe-e37b1c816159_Header-LowFODMAP.jpg?auto=compress%2Cformat&w=0.5&auto=format&fit=max">
+<img width="762" alt="KitchenSync photo" src="https://images.prismic.io/carbmanager/68bd7d46-5f50-413c-97fe-e37b1c816159_Header-LowFODMAP.jpg?auto=compress%2Cformat&w=0.5&auto=format&fit=max">
 </div>
 
 <h1 align="center"> Welcome to KitchenSync+</h1>
@@ -21,9 +21,9 @@
 
 ## Project Overview
 
-(Want to hire the devs that worked on this project? Click [this link](#contributors) to jump to our project contributors!)
+(Want more information on the developers? Click [this link](#contributors) to jump to our project contributors!)
 
-This repo is the Front End part of a project built by students at [Turing School of Software and Design](https://turing.edu/). You can find the Back End repo [HERE](https://github.com/KitchenSyncPlus/KSP_be) and see set-up instructions below. The project itself is an original web app designed by combined Front End and Back End teams. Its purpose is to help individuals search for recipes and create a shopping list of ingredients that can be divvied up among members of an event or group. 
+This repo is the Front End part of a project built by students at [Turing School of Software and Design](https://turing.edu/). You can find the Back End repo [HERE](https://github.com/KitchenSyncPlus/KSP_be) and see set-up instructions below. Its purpose is to help individuals search for recipes and create a shopping list of ingredients that can be divvied up among members of an event or group. Please note that google Oauth is required in order to sign up/ sign in to Kitchensync+
 
 Visit our Front End Site!
 - [KitchenSync+]()
@@ -35,14 +35,10 @@ Visit our Front End Site!
 
 - Continue to gain competency with current technologies and skills aquired at Turing with focus on consuming and exposing APIs.
 - Create a Service Oriented Architecture application
-- 
-- 
 - More in depth understanding and exploration of team dynamics, communication, and project processes.
 
 ## Planning Documents
 
-
-[Wireframes]()
 
 [Project Spec](https://backend.turing.edu/module3/projects/consultancy/)
 
@@ -50,25 +46,48 @@ Visit our Front End Site!
 
 [Deployed Link]()
 
-[Functionality Video]()
 
 ## Technologies and Tools
 
-<img width="737" alt="Screen Shot 2022-10-05 at 7 31 33 PM" src="">
+#### Built With: 
+- [Rails v5.2.8](https://guides.rubyonrails.org/v5.2/)
+- [Ruby 2.7.4](https://www.ruby-lang.org/en/news/2021/07/07/ruby-2-7-4-released/)
+
+#### Tested With:
+- [RSpec](https://github.com/rspec/rspec-rails)
+- [PostMan](https://www.postman.com/)
+- [SimplCov](https://github.com/simplecov-ruby/simplecov)
+- [Pry](https://github.com/pry/pry)
+- [CapyBara](https://github.com/teamcapybara/capybara)
+
+
+#### Other Gems Used: 
+- [Faker](https://github.com/faker-ruby/faker)
+- [Factorybot](https://github.com/thoughtbot/factory_bot)
+- [Bootstrap](https://github.com/twbs/bootstrap-rubygem)
+- [Figaro](https://github.com/laserlemon/figaro)
+- [Rubycop](https://github.com/rubocop/rubocop)
+- [Faraday](https://github.com/lostisland/faraday)
+- [Webmock](https://github.com/bblimke/webmock)
+- [VCR](https://github.com/vcr/vcr)
+- [Omniauth-google-oauth2](https://github.com/zquestz/omniauth-google-oauth2)
+
 
 ## Roadmap
 
-Future features could include:
+Future features may include:
 
-- 
-- 
-- 
+- User based recipe ratings.
+- Recipe Favoriting for users.
+- Request specific brand for ingredients.
+- Time based notifications.
+- Identify nearest grocer in vicinity. 
 
 ## Setup
 
 1. Fork and clone this repository.
-2. Cd into the root directory and run `placeholder---`.
-3. To run this server, run `placeholder---` in the terminal and React will start the development server. To stop the local server, use command `Control + C`.
+2. Cd into the root directory and run `code .`(for Visual Studio).
+3. To run this server, run `rails s` in the terminal and rails will start the development server. To stop the local server, use command `Control + C`.
 4. Open a browser window and go to http://localhost:3000 to view the website.
 5. To run the testing suite, run `open coverage/index.html` and Simplecov will open up in a new window.
 
