@@ -8,6 +8,11 @@ class UserFacade
 
   end
 
+  def self.user(id)
+    @user = DatabaseService.user(id)[:data] 
+    User.new(@user)
+  end
+
   def self.service 
     DatabaseService.new
   end

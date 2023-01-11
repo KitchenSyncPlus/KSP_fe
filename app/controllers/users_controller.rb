@@ -7,11 +7,8 @@ class UsersController < ApplicationController
   end
 
   def show 
-
+    @user = UserFacade.user(params[:id])
   end
-  # def show
-  #   @user = User.find(params[:id])
-  # end
 
   # def new
   #   @new_user = User.new

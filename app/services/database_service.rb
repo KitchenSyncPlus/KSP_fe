@@ -35,4 +35,8 @@ class DatabaseService
     def self.all_users 
         get_url("/api/v1/users")
     end
+
+    def self.user(id)
+        get_url("/api/v1/users/#{id}")
+    end
 end
