@@ -26,8 +26,6 @@ class DatabaseService
     
     def self.user(id)
         # get_url("/api/v1/user", {user_id: id} )
-
-        # temporary, remove when BE endpoints are finished
         response = File.read('spec/fixtures/user_fixture.json')
         JSON.parse(response, symbolize_names: true)
     end
