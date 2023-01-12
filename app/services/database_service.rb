@@ -17,22 +17,28 @@ class DatabaseService
     end
     
     def self.groups
-        # get_url("/api/v1/groups")
+        get_url("/api/v1/groups")
         
         # temporary, remove when BE endpoints are finished
-        response = File.read('spec/fixtures/groups_fixture.json')
-        JSON.parse(response, symbolize_names: true)
+        # response = File.read('spec/fixtures/groups_fixture.json')
+        # JSON.parse(response, symbolize_names: true)
+    end
+
+    def self.group(id)
+        get_url("/api/v1/groups/#{id}")
     end
     
     def self.user(id)
         # get_url("/api/v1/user", {user_id: id} )
-
-        # temporary, remove when BE endpoints are finished
         response = File.read('spec/fixtures/user_fixture.json')
         JSON.parse(response, symbolize_names: true)
     end
 
     def self.all_users 
         get_url("/api/v1/users")
+    end
+
+    def self.user(id)
+        get_url("/api/v1/users/#{id}")
     end
 end

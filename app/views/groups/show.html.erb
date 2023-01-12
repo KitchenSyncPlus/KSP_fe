@@ -9,29 +9,13 @@
   <div class="col-6">
     <table>
       <tr>
-        <th>
-          <td>Group Participants:</td>
-          <td><%= @group.user_count %></td>
-        </th>
       </tr>
       <% @group.users.each do |user| %>
         <tr>
           <td><%= user.name %></td>
         </tr>
       <% end %>
-    </table>
-    <table id="group_menu">
-      <thead>
-        <tr>
-          <th scope="col">Menu</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @group.recipes.each do |r|%>
-          <th scope="row" id="recipe-<%= r.id %>"><%= link_to r.label, recipe_path(r)%></th>
-        <% end %>
-      </tbody>
-    </table>
+
   </div>
   <div class="col-6 d-flex flex-column">
     <p>Add a recipe</p>
