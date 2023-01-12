@@ -25,11 +25,6 @@
 
 This repo is the Front End part of a project built by students at [Turing School of Software and Design](https://turing.edu/). You can find the Back End repo [HERE](https://github.com/KitchenSyncPlus/KSP_be) and see set-up instructions below. Its purpose is to help individuals search for recipes and create a shopping list of ingredients that can be divvied up among members of an event or group. Please note that google Oauth is required in order to sign up/ sign in to Kitchensync+
 
-Visit our Front End Site!
-- [KitchenSync+]()
-
-- [KitchenSynch+ API]()
-
 
 ## Learning Goals
 
@@ -43,8 +38,6 @@ Visit our Front End Site!
 [Project Spec](https://backend.turing.edu/module3/projects/consultancy/)
 
 ## Illustrations
-
-[Deployed Link]()
 
 
 ## Technologies and Tools
@@ -66,16 +59,14 @@ Visit our Front End Site!
 - [Factorybot](https://github.com/thoughtbot/factory_bot)
 - [Bootstrap](https://github.com/twbs/bootstrap-rubygem)
 - [Figaro](https://github.com/laserlemon/figaro)
-- [Rubycop](https://github.com/rubocop/rubocop)
+- [Rubocop](https://github.com/rubocop/rubocop)
 - [Faraday](https://github.com/lostisland/faraday)
 - [Webmock](https://github.com/bblimke/webmock)
 - [VCR](https://github.com/vcr/vcr)
 - [Omniauth-google-oauth2](https://github.com/zquestz/omniauth-google-oauth2)
 
 
-## Roadmap
-
-Future features may include:
+## Future features may include:
 
 - User based recipe ratings.
 - Recipe Favoriting for users.
@@ -88,8 +79,8 @@ Future features may include:
 1. Fork and clone this repository.
 2. Cd into the root directory and run `code .`(for Visual Studio).
 3. To run this server, run `rails s` in the terminal and rails will start the development server. To stop the local server, use command `Control + C`.
-4. Open a browser window and go to http://localhost:3000 to view the website.
-5. To run the testing suite, run `open coverage/index.html` and Simplecov will open up in a new window.
+4. Open a browser window and go to http://localhost:3000 to view the website. Please note that KitchenSync+ will only run if Backend half is also running.
+
 
 Pull down the [Back-End repo](https://github.com/KitchenSyncPlus/KSP_be). Set up instructions are in that repository's README.
 Do not nest this inside your front-end repository.
